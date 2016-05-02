@@ -12,6 +12,8 @@
 		D8F004FC1CCD074E002A7700 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8F004FA1CCD074E002A7700 /* Main.storyboard */; };
 		D8F004FE1CCD074E002A7700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8F004FD1CCD074E002A7700 /* Assets.xcassets */; };
 		D8F005011CCD074E002A7700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8F004FF1CCD074E002A7700 /* LaunchScreen.storyboard */; };
+		D8F005091CCD07F9002A7700 /* drizzy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8F005081CCD07F9002A7700 /* drizzy.jpg */; };
+		D8F0050B1CCD164C002A7700 /* Trophies.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8F0050A1CCD164C002A7700 /* Trophies.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		D8F004FD1CCD074E002A7700 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8F005001CCD074E002A7700 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8F005021CCD074E002A7700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8F005081CCD07F9002A7700 /* drizzy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = drizzy.jpg; path = ../../../drizzy.jpg; sourceTree = "<group>"; };
+		D8F0050A1CCD164C002A7700 /* Trophies.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Trophies.mp3; path = "../../../../Music/iTunes/iTunes Media/Music/Drake/Trophies/Trophies.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +60,9 @@
 			children = (
 				D8F004F61CCD074D002A7700 /* AppDelegate.swift */,
 				D8F004F81CCD074D002A7700 /* ViewController.swift */,
+				D8F0050A1CCD164C002A7700 /* Trophies.mp3 */,
 				D8F004FA1CCD074E002A7700 /* Main.storyboard */,
+				D8F005081CCD07F9002A7700 /* drizzy.jpg */,
 				D8F004FD1CCD074E002A7700 /* Assets.xcassets */,
 				D8F004FF1CCD074E002A7700 /* LaunchScreen.storyboard */,
 				D8F005021CCD074E002A7700 /* Info.plist */,
@@ -124,6 +130,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8F005011CCD074E002A7700 /* LaunchScreen.storyboard in Resources */,
+				D8F005091CCD07F9002A7700 /* drizzy.jpg in Resources */,
+				D8F0050B1CCD164C002A7700 /* Trophies.mp3 in Resources */,
 				D8F004FE1CCD074E002A7700 /* Assets.xcassets in Resources */,
 				D8F004FC1CCD074E002A7700 /* Main.storyboard in Resources */,
 			);

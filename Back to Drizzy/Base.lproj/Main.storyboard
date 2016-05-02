@@ -1,25 +1,112 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Back_to_Drizzy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WkK-y8-d7T">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="HJd-nV-DLW"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Back to Drizzy" id="Uo8-Cl-bWl">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="6sd-SW-3Ud">
+                                            <connections>
+                                                <action selector="Play:" destination="BYZ-38-t0r" id="8dp-Zd-q7J"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7eH-9a-3XF">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="dlm-lt-mRm"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="pause" id="cfU-hg-gFK">
+                                        <connections>
+                                            <action selector="Pause:" destination="BYZ-38-t0r" id="uKr-2j-mnI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="eJr-HI-HsI"/>
+                                    <barButtonItem systemItem="stop" id="7HM-1v-IsU">
+                                        <connections>
+                                            <action selector="Stop:" destination="BYZ-38-t0r" id="2iP-Xq-pmn"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drizzy.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="xMD-aS-iNk">
+                                <rect key="frame" x="67" y="173" width="240" height="321"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="321" id="Gxd-Uf-Kkn"/>
+                                    <constraint firstAttribute="width" constant="240" id="PWn-ax-XWD"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lsz-YI-Geu">
+                                <rect key="frame" x="65" y="502" width="244" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="F2u-DM-5Jt"/>
+                                    <constraint firstAttribute="width" constant="240" id="hTL-HJ-3Fl"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="adSc:" destination="BYZ-38-t0r" eventType="valueChanged" id="tED-iy-Tdk"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="LxQ-5H-CCK">
+                                <rect key="frame" x="65" y="135" width="244" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="513-Qr-vYq"/>
+                                    <constraint firstAttribute="height" constant="30" id="AhJ-KA-CMW"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="adjustVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="d78-cT-b3c"/>
+                                </connections>
+                            </slider>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xMD-aS-iNk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="16m-Yn-d2n"/>
+                            <constraint firstItem="LxQ-5H-CCK" firstAttribute="top" secondItem="WkK-y8-d7T" secondAttribute="bottom" constant="71" id="1m0-4Q-cz5"/>
+                            <constraint firstItem="WkK-y8-d7T" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="F3g-ZG-JqL"/>
+                            <constraint firstItem="lsz-YI-Geu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QHW-ii-GTo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7eH-9a-3XF" secondAttribute="trailing" constant="-20" id="UtX-Ks-70z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WkK-y8-d7T" secondAttribute="trailing" constant="-20" id="WSc-eS-kBD"/>
+                            <constraint firstItem="xMD-aS-iNk" firstAttribute="top" secondItem="WkK-y8-d7T" secondAttribute="bottom" constant="109" id="cXs-OT-xBe"/>
+                            <constraint firstItem="WkK-y8-d7T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="dpO-wI-NsX"/>
+                            <constraint firstItem="LxQ-5H-CCK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ngH-x9-bl7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7eH-9a-3XF" secondAttribute="bottom" id="uzT-zk-tBZ"/>
+                            <constraint firstItem="lsz-YI-Geu" firstAttribute="top" secondItem="xMD-aS-iNk" secondAttribute="bottom" constant="8" id="vtw-Jx-8vY"/>
+                            <constraint firstItem="7eH-9a-3XF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="wbC-uX-IFp"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="scrubberSlider" destination="lsz-YI-Geu" id="sYc-ld-tnd"/>
+                        <outlet property="volumeSlider" destination="LxQ-5H-CCK" id="f0p-dd-NnE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="244.5" y="309.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="drizzy.jpg" width="241" height="209"/>
+    </resources>
 </document>
